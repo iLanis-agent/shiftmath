@@ -1,0 +1,840 @@
+{
+ "cases": [
+  {
+   "fn": "cover",
+   "args": [
+    "14",
+    "4",
+    "3"
+   ],
+   "expect": "The 14 open hours in shifts of 4 hours take 4 shifts, covering 16 hours with 2 over, and with 3 staff a shift that is 12 shifts of work."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "12",
+    "5"
+   ],
+   "expect": "The 12 shifts of work at 5 shifts a person take 3 people, leaving 3 shifts spare."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "12",
+    "4",
+    "15.50"
+   ],
+   "expect": "The 12 shifts of 4 hours at $15.50 an hour come to 48 hours and $744.00."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "1",
+    "1",
+    "1"
+   ],
+   "expect": "The 1 open hour in shifts of 1 hour take 1 shift, covering 1 hour with 0 over, and with 1 staff a shift that is 1 shift of work."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "1",
+    "1"
+   ],
+   "expect": "The 1 shift of work at 1 shift a person take 1 person, leaving 0 shifts spare."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "1",
+    "1",
+    "0.01"
+   ],
+   "expect": "The 1 shift of 1 hour at $0.01 an hour come to 1 hour and $0.01."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "28",
+    "4",
+    "645"
+   ],
+   "expect": "The 28 open hours in shifts of 4 hours take 7 shifts, covering 28 hours with 0 over, and with 645 staff a shift that is 4515 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "123",
+    "7",
+    "710"
+   ],
+   "expect": "The 123 open hours in shifts of 7 hours take 18 shifts, covering 126 hours with 3 over, and with 710 staff a shift that is 12780 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "118",
+    "10",
+    "893"
+   ],
+   "expect": "The 118 open hours in shifts of 10 hours take 12 shifts, covering 120 hours with 2 over, and with 893 staff a shift that is 10716 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "39",
+    "12",
+    "601"
+   ],
+   "expect": "The 39 open hours in shifts of 12 hours take 4 shifts, covering 48 hours with 9 over, and with 601 staff a shift that is 2404 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "159",
+    "14",
+    "870"
+   ],
+   "expect": "The 159 open hours in shifts of 14 hours take 12 shifts, covering 168 hours with 9 over, and with 870 staff a shift that is 10440 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "121",
+    "11",
+    "333"
+   ],
+   "expect": "The 121 open hours in shifts of 11 hours take 11 shifts, covering 121 hours with 0 over, and with 333 staff a shift that is 3663 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "144",
+    "9",
+    "231"
+   ],
+   "expect": "The 144 open hours in shifts of 9 hours take 16 shifts, covering 144 hours with 0 over, and with 231 staff a shift that is 3696 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "135",
+    "15",
+    "550"
+   ],
+   "expect": "The 135 open hours in shifts of 15 hours take 9 shifts, covering 135 hours with 0 over, and with 550 staff a shift that is 4950 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "35",
+    "15",
+    "906"
+   ],
+   "expect": "The 35 open hours in shifts of 15 hours take 3 shifts, covering 45 hours with 10 over, and with 906 staff a shift that is 2718 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "103",
+    "17",
+    "407"
+   ],
+   "expect": "The 103 open hours in shifts of 17 hours take 7 shifts, covering 119 hours with 16 over, and with 407 staff a shift that is 2849 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "36",
+    "13",
+    "725"
+   ],
+   "expect": "The 36 open hours in shifts of 13 hours take 3 shifts, covering 39 hours with 3 over, and with 725 staff a shift that is 2175 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "12",
+    "24",
+    "749"
+   ],
+   "expect": "The 12 open hours in shifts of 24 hours take 1 shift, covering 24 hours with 12 over, and with 749 staff a shift that is 749 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "167",
+    "11",
+    "812"
+   ],
+   "expect": "The 167 open hours in shifts of 11 hours take 16 shifts, covering 176 hours with 9 over, and with 812 staff a shift that is 12992 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "2",
+    "7",
+    "406"
+   ],
+   "expect": "The 2 open hours in shifts of 7 hours take 1 shift, covering 7 hours with 5 over, and with 406 staff a shift that is 406 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "30",
+    "16",
+    "204"
+   ],
+   "expect": "The 30 open hours in shifts of 16 hours take 2 shifts, covering 32 hours with 2 over, and with 204 staff a shift that is 408 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "163",
+    "1",
+    "424"
+   ],
+   "expect": "The 163 open hours in shifts of 1 hour take 163 shifts, covering 163 hours with 0 over, and with 424 staff a shift that is 69112 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "16",
+    "3",
+    "485"
+   ],
+   "expect": "The 16 open hours in shifts of 3 hours take 6 shifts, covering 18 hours with 2 over, and with 485 staff a shift that is 2910 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "58",
+    "5",
+    "472"
+   ],
+   "expect": "The 58 open hours in shifts of 5 hours take 12 shifts, covering 60 hours with 2 over, and with 472 staff a shift that is 5664 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "141",
+    "9",
+    "839"
+   ],
+   "expect": "The 141 open hours in shifts of 9 hours take 16 shifts, covering 144 hours with 3 over, and with 839 staff a shift that is 13424 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "124",
+    "14",
+    "46"
+   ],
+   "expect": "The 124 open hours in shifts of 14 hours take 9 shifts, covering 126 hours with 2 over, and with 46 staff a shift that is 414 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "132",
+    "15",
+    "649"
+   ],
+   "expect": "The 132 open hours in shifts of 15 hours take 9 shifts, covering 135 hours with 3 over, and with 649 staff a shift that is 5841 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "96",
+    "18",
+    "712"
+   ],
+   "expect": "The 96 open hours in shifts of 18 hours take 6 shifts, covering 108 hours with 12 over, and with 712 staff a shift that is 4272 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "49",
+    "23",
+    "283"
+   ],
+   "expect": "The 49 open hours in shifts of 23 hours take 3 shifts, covering 69 hours with 20 over, and with 283 staff a shift that is 849 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "84",
+    "21",
+    "583"
+   ],
+   "expect": "The 84 open hours in shifts of 21 hours take 4 shifts, covering 84 hours with 0 over, and with 583 staff a shift that is 2332 shifts of work."
+  },
+  {
+   "fn": "cover",
+   "args": [
+    "65",
+    "4",
+    "299"
+   ],
+   "expect": "The 65 open hours in shifts of 4 hours take 17 shifts, covering 68 hours with 3 over, and with 299 staff a shift that is 5083 shifts of work."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "24250",
+    "93"
+   ],
+   "expect": "The 24250 shifts of work at 93 shifts a person take 261 people, leaving 23 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "87116",
+    "50"
+   ],
+   "expect": "The 87116 shifts of work at 50 shifts a person take 1743 people, leaving 34 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "10564",
+    "62"
+   ],
+   "expect": "The 10564 shifts of work at 62 shifts a person take 171 people, leaving 38 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "44719",
+    "4"
+   ],
+   "expect": "The 44719 shifts of work at 4 shifts a person take 11180 people, leaving 1 shift spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "9406",
+    "67"
+   ],
+   "expect": "The 9406 shifts of work at 67 shifts a person take 141 people, leaving 41 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "41611",
+    "92"
+   ],
+   "expect": "The 41611 shifts of work at 92 shifts a person take 453 people, leaving 65 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "34472",
+    "95"
+   ],
+   "expect": "The 34472 shifts of work at 95 shifts a person take 363 people, leaving 13 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "50488",
+    "89"
+   ],
+   "expect": "The 50488 shifts of work at 89 shifts a person take 568 people, leaving 64 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "73343",
+    "48"
+   ],
+   "expect": "The 73343 shifts of work at 48 shifts a person take 1528 people, leaving 1 shift spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "45075",
+    "49"
+   ],
+   "expect": "The 45075 shifts of work at 49 shifts a person take 920 people, leaving 5 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "15129",
+    "56"
+   ],
+   "expect": "The 15129 shifts of work at 56 shifts a person take 271 people, leaving 47 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "51949",
+    "59"
+   ],
+   "expect": "The 51949 shifts of work at 59 shifts a person take 881 people, leaving 30 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "82409",
+    "52"
+   ],
+   "expect": "The 82409 shifts of work at 52 shifts a person take 1585 people, leaving 11 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "27402",
+    "5"
+   ],
+   "expect": "The 27402 shifts of work at 5 shifts a person take 5481 people, leaving 3 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "40841",
+    "10"
+   ],
+   "expect": "The 40841 shifts of work at 10 shifts a person take 4085 people, leaving 9 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "27355",
+    "61"
+   ],
+   "expect": "The 27355 shifts of work at 61 shifts a person take 449 people, leaving 34 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "99550",
+    "92"
+   ],
+   "expect": "The 99550 shifts of work at 92 shifts a person take 1083 people, leaving 86 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "69085",
+    "4"
+   ],
+   "expect": "The 69085 shifts of work at 4 shifts a person take 17272 people, leaving 3 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "9187",
+    "94"
+   ],
+   "expect": "The 9187 shifts of work at 94 shifts a person take 98 people, leaving 25 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "62019",
+    "3"
+   ],
+   "expect": "The 62019 shifts of work at 3 shifts a person take 20673 people, leaving 0 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "37814",
+    "63"
+   ],
+   "expect": "The 37814 shifts of work at 63 shifts a person take 601 people, leaving 49 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "90358",
+    "7"
+   ],
+   "expect": "The 90358 shifts of work at 7 shifts a person take 12909 people, leaving 5 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "69655",
+    "39"
+   ],
+   "expect": "The 69655 shifts of work at 39 shifts a person take 1787 people, leaving 38 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "82357",
+    "95"
+   ],
+   "expect": "The 82357 shifts of work at 95 shifts a person take 867 people, leaving 8 shifts spare."
+  },
+  {
+   "fn": "rota",
+   "args": [
+    "93170",
+    "27"
+   ],
+   "expect": "The 93170 shifts of work at 27 shifts a person take 3451 people, leaving 7 shifts spare."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "39655",
+    "18",
+    "212.82"
+   ],
+   "expect": "The 39655 shifts of 18 hours at $212.82 an hour come to 713790 hours and $151908787.80."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "66568",
+    "18",
+    "450.14"
+   ],
+   "expect": "The 66568 shifts of 18 hours at $450.14 an hour come to 1198224 hours and $539368551.36."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "19558",
+    "15",
+    "113.22"
+   ],
+   "expect": "The 19558 shifts of 15 hours at $113.22 an hour come to 293370 hours and $33215351.40."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "89197",
+    "12",
+    "915.61"
+   ],
+   "expect": "The 89197 shifts of 12 hours at $915.61 an hour come to 1070364 hours and $980035982.04."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "66810",
+    "7",
+    "601.12"
+   ],
+   "expect": "The 66810 shifts of 7 hours at $601.12 an hour come to 467670 hours and $281125790.40."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "14151",
+    "19",
+    "193.45"
+   ],
+   "expect": "The 14151 shifts of 19 hours at $193.45 an hour come to 268869 hours and $52012708.05."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "12131",
+    "19",
+    "966.49"
+   ],
+   "expect": "The 12131 shifts of 19 hours at $966.49 an hour come to 230489 hours and $222765313.61."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "17148",
+    "9",
+    "603.72"
+   ],
+   "expect": "The 17148 shifts of 9 hours at $603.72 an hour come to 154332 hours and $93173315.04."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "20225",
+    "2",
+    "419.81"
+   ],
+   "expect": "The 20225 shifts of 2 hours at $419.81 an hour come to 40450 hours and $16981314.50."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "65811",
+    "1",
+    "466.22"
+   ],
+   "expect": "The 65811 shifts of 1 hour at $466.22 an hour come to 65811 hours and $30682404.42."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "68116",
+    "13",
+    "728.12"
+   ],
+   "expect": "The 68116 shifts of 13 hours at $728.12 an hour come to 885508 hours and $644756084.96."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "11996",
+    "11",
+    "188.1"
+   ],
+   "expect": "The 11996 shifts of 11 hours at $188.10 an hour come to 131956 hours and $24820923.60."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "64653",
+    "16",
+    "444.39"
+   ],
+   "expect": "The 64653 shifts of 16 hours at $444.39 an hour come to 1034448 hours and $459698346.72."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "787",
+    "3",
+    "40.03"
+   ],
+   "expect": "The 787 shifts of 3 hours at $40.03 an hour come to 2361 hours and $94510.83."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "26231",
+    "13",
+    "106.85"
+   ],
+   "expect": "The 26231 shifts of 13 hours at $106.85 an hour come to 341003 hours and $36436170.55."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "66081",
+    "24",
+    "836.76"
+   ],
+   "expect": "The 66081 shifts of 24 hours at $836.76 an hour come to 1585944 hours and $1327054501.44."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "43284",
+    "3",
+    "346.09"
+   ],
+   "expect": "The 43284 shifts of 3 hours at $346.09 an hour come to 129852 hours and $44940478.68."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "57929",
+    "12",
+    "987.77"
+   ],
+   "expect": "The 57929 shifts of 12 hours at $987.77 an hour come to 695148 hours and $686646339.96."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "63506",
+    "24",
+    "259.24"
+   ],
+   "expect": "The 63506 shifts of 24 hours at $259.24 an hour come to 1524144 hours and $395119090.56."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "28804",
+    "4",
+    "477.6"
+   ],
+   "expect": "The 28804 shifts of 4 hours at $477.60 an hour come to 115216 hours and $55027161.60."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "22238",
+    "2",
+    "606.99"
+   ],
+   "expect": "The 22238 shifts of 2 hours at $606.99 an hour come to 44476 hours and $26996487.24."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "26677",
+    "24",
+    "457.39"
+   ],
+   "expect": "The 26677 shifts of 24 hours at $457.39 an hour come to 640248 hours and $292843032.72."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "77978",
+    "20",
+    "235.56"
+   ],
+   "expect": "The 77978 shifts of 20 hours at $235.56 an hour come to 1559560 hours and $367369953.60."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "87950",
+    "19",
+    "990.52"
+   ],
+   "expect": "The 87950 shifts of 19 hours at $990.52 an hour come to 1671050 hours and $1655208446.00."
+  },
+  {
+   "fn": "pay",
+   "args": [
+    "7014",
+    "19",
+    "14.05"
+   ],
+   "expect": "The 7014 shifts of 19 hours at $14.05 an hour come to 133266 hours and $1872387.30."
+  }
+ ],
+ "errors": [
+  [
+   "cover",
+   [
+    "0",
+    "4",
+    "3"
+   ]
+  ],
+  [
+   "cover",
+   [
+    "169",
+    "4",
+    "3"
+   ]
+  ],
+  [
+   "cover",
+   [
+    "14",
+    "0",
+    "3"
+   ]
+  ],
+  [
+   "cover",
+   [
+    "14",
+    "25",
+    "3"
+   ]
+  ],
+  [
+   "cover",
+   [
+    "14",
+    "4",
+    "0"
+   ]
+  ],
+  [
+   "cover",
+   [
+    "14",
+    "4",
+    "1001"
+   ]
+  ],
+  [
+   "cover",
+   [
+    "14.5",
+    "4",
+    "3"
+   ]
+  ],
+  [
+   "rota",
+   [
+    "0",
+    "5"
+   ]
+  ],
+  [
+   "rota",
+   [
+    "100001",
+    "5"
+   ]
+  ],
+  [
+   "rota",
+   [
+    "12",
+    "0"
+   ]
+  ],
+  [
+   "rota",
+   [
+    "12",
+    "101"
+   ]
+  ],
+  [
+   "pay",
+   [
+    "0",
+    "4",
+    "15.5"
+   ]
+  ],
+  [
+   "pay",
+   [
+    "12",
+    "0",
+    "15.5"
+   ]
+  ],
+  [
+   "pay",
+   [
+    "12",
+    "25",
+    "15.5"
+   ]
+  ],
+  [
+   "pay",
+   [
+    "12",
+    "4",
+    "0"
+   ]
+  ],
+  [
+   "pay",
+   [
+    "12",
+    "4",
+    "1000.01"
+   ]
+  ],
+  [
+   "pay",
+   [
+    "12",
+    "4",
+    "15.555"
+   ]
+  ]
+ ]
+}
