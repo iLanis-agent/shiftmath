@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shift Math - app</title>
+<style>
+  :root { --accent:#6a4fb0; --ink:#1d1830; --paper:#f4f1fa; --soft:#e4def2; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2rem 1.2rem; }
+  h1 { font-size:1.8rem; color:var(--accent); }
+  .boundary { margin:1rem 0 1.4rem; }
+  .panel { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1rem 1.1rem; margin-bottom:1.1rem; }
+  h2 { font-size:1.1rem; margin-bottom:.6rem; }
+  p.note { font-size:.9rem; margin-bottom:.4rem; }
+  label { display:block; font-size:.9rem; margin:.45rem 0 .1rem; }
+  input { width:100%; padding:.45rem .55rem; font-size:1rem; border:1px solid #b8aada; border-radius:6px; background:#fff; color:var(--ink); }
+  .row2 { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+  .out { margin-top:.7rem; font-size:.98rem; background:#fff; border:1px dashed #b8aada; border-radius:6px; padding:.6rem .7rem; min-height:2.4rem; overflow-wrap:anywhere; }
+  .out.err { border-color:#b03030; color:#8a1f1f; }
+  footer { margin-top:1.8rem; font-size:.85rem; color:#74659b; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Shift Math</h1>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    This page counts work shifts with multiplication, division and rounding-up: the shifts an opening time takes, the people a rota takes, and the hours and pay. It uses no named constants. The open hours, the shift length, the staff a shift, the shifts a person and the hourly rate are yours to decide and read off your own schedule and agreement. It applies the counting as written, so it has not met your staff and does not know their availability, breaks, contracts, wage or labor rules, and it gives no verdict that a rota is legal, fair or enough cover. Every number here is your own entry.
+  </div>
+
+  <div class="panel">
+    <h2>The cover truth</h2>
+    <p class="note">Cover: the open hours divided by the shift length, rounded up, with the hours over and the shifts of work.</p>
+    <div class="row2"><div><label for="o-h">Open hours</label><input id="o-h" type="text" value="14"></div><div><label for="o-l">Shift length (hours)</label><input id="o-l" type="text" value="4"></div></div>
+    <div class="row2"><div><label for="o-s">Staff a shift</label><input id="o-s" type="text" value="3"></div></div>
+    <div class="out" id="o-out"></div>
+  </div>
+  <div class="panel">
+    <h2>The rota truth</h2>
+    <p class="note">Rota: the shifts of work divided by the shifts a person works, rounded up, with the shifts spare.</p>
+    <div class="row2"><div><label for="r-w">Shifts of work</label><input id="r-w" type="text" value="12"></div><div><label for="r-p">Shifts a person</label><input id="r-p" type="text" value="5"></div></div>
+    <div class="out" id="r-out"></div>
+  </div>
+  <div class="panel">
+    <h2>The pay truth</h2>
+    <p class="note">Pay: the shifts times the shift length gives the hours, and the hours times the hourly rate gives the pay.</p>
+    <div class="row2"><div><label for="p-k">Shifts</label><input id="p-k" type="text" value="12"></div><div><label for="p-l">Shift length (hours)</label><input id="p-l" type="text" value="4"></div></div>
+    <div class="row2"><div><label for="p-r">Hourly rate (dollars)</label><input id="p-r" type="text" value="15.50"></div></div>
+    <div class="out" id="p-out"></div>
+  </div>
+
+  <footer>Shift Math is exact arithmetic over the numbers you enter. <a href="index.html">Why it exists</a>.</footer>
+</main>
+<script src="engine.js"></script>
+<script>
+  function show(id, fn) {
+    const out = document.getElementById(id);
+    try { out.textContent = fn(); out.classList.remove("err"); }
+    catch (e) { out.textContent = e.message; out.classList.add("err"); }
+  }
+  function recalc() {
+    const v = (id) => document.getElementById(id).value;
+    show("o-out", () => coverTruth(v("o-h"), v("o-l"), v("o-s")));
+    show("r-out", () => rotaTruth(v("r-w"), v("r-p")));
+    show("p-out", () => payTruth(v("p-k"), v("p-l"), v("p-r")));
+  }
+  document.querySelectorAll("input").forEach((el) => {
+    el.addEventListener("input", recalc);
+    el.addEventListener("change", recalc);
+  });
+  recalc();
+</script>
+</body>
+</html>
